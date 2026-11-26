@@ -5,14 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mutabaah Tahfizh — Data Hafalan Santri</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-  <div class="ar">مُتَابَعَةُ التَّحْفِيظ</div>
-  <h1>Mutabaah Tahfizh</h1>
-  <p>Semester Ganjil · TP. 2025/2026</p>
+  <img src="images/logo.jpg" alt="Logo SMPIT Miftahul Ulum" width="68" height="68">
+  <div>
+    <h1>SMPIT Miftahul Ulum</h1>
+    <p>Sekolah Menengah Pertama Islam Terpadu</p>
+    <p>Mutabaah Tahfizh · Semester Ganjil</p>
+  </div>
 </header>
 <nav role="tablist" aria-label="Menu utama">
   <button role="tab" data-t="ringkasan" aria-selected="true">Ringkasan</button>
@@ -22,15 +25,15 @@
 <main>
   <section class="box sync" aria-label="Sumber data">
     <div><b>Data dari Excel</b><br><small id="sumber"></small></div>
-    <div>
+    <div id="kontrol" hidden>
       <input id="berkas" type="file" accept=".xlsx,.xls" hidden>
       <button class="btn" id="btn-impor" type="button">Perbarui dari Excel</button>
-      <button class="btn sec" id="btn-reset" type="button">Kembali ke data awal</button>
     </div>
     <p class="msg" id="pesan" role="alert" style="flex-basis:100%"></p>
   </section>
   <div id="view"></div>
 </main>
+<script src="data.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="script.js"></script>
 </body>
